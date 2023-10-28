@@ -69,9 +69,9 @@ const userPoints = async (userId) => {
 // console.log('카트에 들어있는 수량 :', cartQuantity);
 
 // 2) 결제:  points 전체 or 부분 차감 (delete 없이)
-const updatePoints = async (userId, updatePoints) => {
+const updatePoints = async (userId, remainPoints) => {
   await AppDataSource.query(`
-    UPDATE users SET  points = '${updatePoints}'  WHERE id = ${userId} 
+    UPDATE users SET  points = '${remainPoints}'  WHERE id = ${userId} 
     `); // return 필요없음 (res 보내줄 값이 없음 )
 }; //장바구니 테이블 : 수량 변경만 하면 됨
 

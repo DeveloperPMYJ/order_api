@@ -11,6 +11,8 @@ const asyncWrap = (asyncController) => {
 const errorHandler = (err, req, res, next) => {
   console.log('error handler');
   console.error(err);
+
+  // next 로 활용할 경우 아래 코드
   // let statusCode = 400;
   // let message = err.message;
 
